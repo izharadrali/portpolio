@@ -84,7 +84,7 @@ try {
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* ADD BrowserRouter with basename here */}
-    <BrowserRouter basename="/portpolio/">
+    <BrowserRouter basename="/portfolio/">
       <App />
     </BrowserRouter>
   </StrictMode>,
