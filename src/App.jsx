@@ -115,15 +115,6 @@ function App() {
             <Link to="/skills">Skills</Link>
             <Link to="/contact">Contact</Link>
           </nav>
-          <button
-            className="btn nites-btn"
-            onClick={() => setIsLight(prev => !prev)}
-            aria-pressed={isLight}
-            aria-label="Toggle Nites theme"
-            title="Toggle Nites"
-          >
-            Nites
-          </button>
         </div>
       </header>
 
