@@ -1393,24 +1393,44 @@ h1 {
   box-shadow: 0 16px 50px rgba(0, 217, 255, 0.15);
   border-left-color: #00d9ff;
 }
-/* Fix navbar on small screens */
+
+
+
+
+/* Hide desktop menu on mobile */
 @media (max-width: 768px) {
-  .nav-inner {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem;
-    gap: 10px;
+  .desktop-menu {
+    display: none;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 15px;
-    text-align: center;
-  }
-
-  .nites-btn {
-    margin-left: 0;
+  .mobile-menu-btn {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
   }
 }
 
+/* Desktop button hidden by default */
+.mobile-menu-btn {
+  display: none;
+}
 
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 25px;
+  background: rgba(20,20,20,0.95);
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.mobile-menu a {
+  color: #b0b8d4;
+  font-size: 1rem;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
