@@ -1,4 +1,3 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Projects from "./pages/projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
@@ -12,6 +11,8 @@ import "aos/dist/aos.css";
 import "./App.css";
 import photo from './assets/photo.jpg';
 import CVModal from './components/CVModal';
+// Import only the components, not the Router wrapper
+import { Routes, Route, Link } from "react-router-dom"; 
 
 function Home() {
   const [showCVModal, setShowCVModal] = useState(false);
@@ -100,7 +101,8 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    // REMOVE THE <Router> WRAPPER HERE, IT'S NOW IN MAIN.JSX
+    <> 
       <header className="navbar">
         <div className="nav-inner">
           <Link to="/" className="logo">Izhar Adrali</Link>
@@ -135,7 +137,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin/messages" element={<AdminMessages />} />
       </Routes>
-    </Router>
+    {/* REMOVE THE </Router> WRAPPER HERE, IT'S NOW IN MAIN.JSX */}
+    </> 
   );
 }
 
